@@ -1,10 +1,16 @@
-let tg = window.Telegram.WebApp;
+let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
 
-Telegram.WebApp.onEvent('plusHelp', function(){
-	tg.sendData("some string that we need to send"); 
-	//при клике на основную кнопку отправляем данные в строковом виде
+tg.expand();
+
+tg.MainButton.text = "Отправить"; //изменяем текст кнопки 
+tg.MainButton.textColor = "#F55353"; //изменяем цвет текста кнопки
+tg.MainButton.color = "#143F6B"; //изменяем цвет бэкграунда кнопки
+
+
+Telegram.WebApp.onEvent('mainButtonClicked', function(){
+    tg.sendData("some string that we need to send"); 
+    //при клике на основную кнопку отправляем данные в строковом виде
 });
-
 
 const valueKill = Number(document.getElementById('numKill').innerHTML)
 const valueDeth = Number(document.getElementById('numDeth').innerHTML)
