@@ -146,10 +146,6 @@
   transition: 0.5s;
   border: 5px solid white;
 }
-
-
-
-
 #skill{
 	background: linear-gradient(to right, red, blue,green, green);
 }
@@ -162,6 +158,7 @@
 #shelp{
 	background: linear-gradient(to right, red, blue,green, green);
 }
+
 
 .btnSend{
 	width: 100%;
