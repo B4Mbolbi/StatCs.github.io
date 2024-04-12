@@ -1,20 +1,12 @@
-const ball = document.querySelector('.ball')
-const valueBall = ball.innerHTML
-
 
 const valueKill = Number(document.getElementById('numKill').innerHTML)
 const valueDeth = Number(document.getElementById('numDeth').innerHTML)
 const valueSci = Number(document.getElementById('numSci').innerHTML)
 const valueHelp = Number(document.getElementById('numHelp').innerHTML)
 
-ball.innerHTML = valueKill + valueDeth + valueSci + valueHelp
-
-
 function sliderKill(val) {
 document.getElementById('numKill').innerHTML = val;
     
-    ball.innerHTML = Number(valueBall) + Number(val)
-
     if(Number(val) <= 10){
         document.querySelector('.kill').style.boxShadow = '0px 0px 10px 10px red'
         document.getElementById('numKill').style.border = '5px solid red'
