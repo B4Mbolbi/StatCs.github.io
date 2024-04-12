@@ -5,8 +5,20 @@ tg.expand();
 let btn = document.querySelector('.sendData')
 
 function sendData(){
+    const valueKill = Number(document.getElementById('numKill').innerHTML)
+    const valueDeth = Number(document.getElementById('numDeth').innerHTML)
+    const valueSci = Number(document.getElementById('numSci').innerHTML)
+    const valueHelp = Number(document.getElementById('numHelp').innerHTML)
+
     console.log('sending!!!')
-    tg.sendData("some string that we need to send"); 
+    var person = {
+        'kill': Number(valueKill),
+        'deth': Number(valueDeth),
+        'sci': Number(valueSci),
+        'help': Number(valueHelp),
+
+    };
+    tg.sendData(person); 
 }
     
     //при клике на основную кнопку отправляем данные в строковом виде
