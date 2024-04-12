@@ -9,7 +9,7 @@ tg.MainButton.color = "#143F6B"; //изменяем цвет бэкграунд�
 
 let btn = document.querySelector('.sendData')
 
-sendData(){
+function sendData(){
     tg.sendData("some string that we need to send"); 
 }
 
