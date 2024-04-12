@@ -162,3 +162,23 @@
 #shelp{
 	background: linear-gradient(to right, red, blue,green, green);
 }
+
+.btnSend{
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.sendData{
+	width: 100%;
+	height: 50px;
+	border-radius: 30px;
+	appearance: none;
+	color: white;
+	border: 5px solid white;
+}
+.sendData:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #cbd6ee;
+}
