@@ -1,3 +1,10 @@
+let tg = window.Telegram.WebApp;
+
+Telegram.WebApp.onEvent('plusHelp', function(){
+	tg.sendData("some string that we need to send"); 
+	//при клике на основную кнопку отправляем данные в строковом виде
+});
+
 
 const valueKill = Number(document.getElementById('numKill').innerHTML)
 const valueDeth = Number(document.getElementById('numDeth').innerHTML)
