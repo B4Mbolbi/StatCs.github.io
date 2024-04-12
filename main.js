@@ -18,7 +18,7 @@ function sendData(){
         'help': Number(valueHelp),
 
     };
-    tg.sendData(person); 
+   tg.sendData(`data ${person}`); 
 }
     
     //при клике на основную кнопку отправляем данные в строковом виде
