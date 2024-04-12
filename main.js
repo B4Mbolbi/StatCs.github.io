@@ -11,14 +11,8 @@ function sendData(){
     const valueHelp = Number(document.getElementById('numHelp').innerHTML)
 
     console.log('sending!!!')
-    var person = {
-        'kill': Number(valueKill),
-        'deth': Number(valueDeth),
-        'sci': Number(valueSci),
-        'help': Number(valueHelp),
-
-    };
-   tg.sendData(`data ${person}`); 
+    tg.sendData(`kill #${valueKill} deth #${valueDeth} sci #${valueSci} help #${valueHelp}`); 
+} 
 }
     
     //при клике на основную кнопку отправляем данные в строковом виде
