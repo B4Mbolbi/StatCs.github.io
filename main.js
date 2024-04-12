@@ -7,10 +7,11 @@ tg.MainButton.textColor = "#F55353"; //изменяем цвет текста к
 tg.MainButton.color = "#143F6B"; //изменяем цвет бэкграунда кнопки
 
 
-Telegram.WebApp.onEvent('mainButtonClicked', function(){
+let btn = document.querySelector('.sendData')
+
+sendData(){
     tg.sendData("some string that we need to send"); 
-    //при клике на основную кнопку отправляем данные в строковом виде
-});
+}
 
 const valueKill = Number(document.getElementById('numKill').innerHTML)
 const valueDeth = Number(document.getElementById('numDeth').innerHTML)
