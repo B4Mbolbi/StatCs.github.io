@@ -9,18 +9,11 @@ function sendData(){
     const valueDeth = Number(document.getElementById('numDeth').innerHTML)
     const valueSci = Number(document.getElementById('numSci').innerHTML)
     const valueHelp = Number(document.getElementById('numHelp').innerHTML)
-
-    console.log('sending!!!')
-    var person = {
-        'kill': Number(valueKill),
-        'deth': Number(valueDeth),
-        'sci': Number(valueSci),
-        'help': Number(valueHelp),
-
-    };
-    tg.sendData(`kill #${valueKill} deth #${valueDeth} sci #${valueSci} help #${valueHelp}`); 
+    tg.sendData(`{'add_game' : {"kill" : ${valueKill}, "deth" :${valueDeth}, "sci" :${valueSci}, "help": ${valueHelp}}}`); 
 }
-    
+
+let button = document.querySelector('.sendData')
+   
     //при клике на основную кнопку отправляем данные в строковом виде
 
 
@@ -33,15 +26,19 @@ document.getElementById('numKill').innerHTML = val;
     if(Number(val) <= 10){
         document.querySelector('.kill').style.boxShadow = '0px 0px 10px 10px red'
         document.getElementById('numKill').style.border = '5px solid red'
+        
+        
 
     }        
     if(Number(val) > 10){
         document.querySelector('.kill').style.boxShadow = '0px 0px 10px 10px blue'
         document.getElementById('numKill').style.border = '5px solid blue'
+        
     }        
     if(Number(val) > 32){
         document.querySelector('.kill').style.boxShadow = '0px 0px 10px 10px green'
         document.getElementById('numKill').style.border = '5px solid green'
+        
     }
 }
 
@@ -77,12 +74,21 @@ function sliderHelp(val) {
 
     if(Number(val) <= 3){
         document.querySelector('.help').style.boxShadow = '0px 0px 10px 10px red'
-    }        
+        button.style.background = "red"
+    }    
+     
     if(Number(val) > 3){
         document.querySelector('.help').style.boxShadow = '0px 0px 10px 10px blue'
+        button.style.background = "linear-gradient(to right, red, blue, green)"
     }        
     if(Number(val) >= 9){
         document.querySelector('.help').style.boxShadow = '0px 0px 10px 10px green'
+        button.style.background = "linear-gradient(to right, blue, green)"
+    }    
+
+    if(Number(val) >= 13){
+        document.querySelector('.help').style.boxShadow = '0px 0px 10px 10px green'
+        button.style.background = "linear-gradient(to right, lightgreen, green)"
     }
 }
 
